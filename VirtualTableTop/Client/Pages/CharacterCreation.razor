@@ -1,0 +1,18 @@
+﻿@page "/character-creation"
+@using VirtualTableTop.Client.Components
+@using VirtualTableTop.Shared;
+
+<h2>Character Creation</h2>
+
+<CascadingValue Value="@Character">
+    <EditForm Model="@Character">
+        <BiographicInfoComponent />
+        <AttributesComponent />
+        <SkillsComponent />
+        <SubmitComponent />
+    </EditForm>
+</CascadingValue>
+
+@code {
+    private Character Character { get; set; } = new Character();
+}

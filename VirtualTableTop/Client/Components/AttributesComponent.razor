@@ -1,0 +1,14 @@
+﻿@using VirtualTableTop.Shared;
+
+<div>
+    <h3>Attributes</h3>
+    <div>
+        <label for="strength">Strength:</label>
+        <input type="number" id="strength" @bind="@(Character.GetComponent<Attributes>().Strength)" />
+    </div>
+    <!-- Similarly for other attributes -->
+</div>
+
+@code {
+    [CascadingParameter] public Character Character { get; set; }
+}

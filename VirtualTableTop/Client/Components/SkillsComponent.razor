@@ -1,0 +1,13 @@
+﻿@using VirtualTableTop.Shared;
+<div>
+    <h3>Skills</h3>
+    <div>
+        <label for="acrobatics">Acrobatics:</label>
+        <input type="number" id="acrobatics" @bind="@(Character.GetComponent<Skills>().SkillRanks["Acrobatics"])" />
+    </div>
+    <!-- Similarly for other skills -->
+</div>
+
+@code {
+    [CascadingParameter] public Character Character { get; set; }
+}

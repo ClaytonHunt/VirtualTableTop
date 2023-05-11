@@ -1,0 +1,14 @@
+﻿@using VirtualTableTop.Shared;
+
+<div>
+    <button type="submit" @onclick="SubmitCharacter">Create Character</button>
+</div>
+
+@code {
+    [CascadingParameter] public Character Character { get; set; }
+
+    private void SubmitCharacter()
+    {
+        // Save the character or perform other actions
+    }
+}

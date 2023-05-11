@@ -1,0 +1,15 @@
+﻿@using VirtualTableTop.Shared;
+
+<div>
+    <h3>Biographic Info</h3>
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" @bind="@(Character.GetComponent<BiographicInfo>().Name)" />
+    </div>
+    <!-- Similarly for other biographic info properties -->
+</div>
+
+@code {
+    [CascadingParameter] 
+    public Character Character { get; set; }
+}
